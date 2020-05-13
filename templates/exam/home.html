@@ -1,0 +1,21 @@
+{% extends "exam/base.html" %}
+
+
+{% block content %}
+
+   <div class="container my-3">
+    {% for exam in exams %}
+    <article class="card my-3">
+        <div class="card-header"><a class="card-title" title="click here to see the details..." href="{% url 'exam_detail' exam.id %}" >{{ exam.sub_code }}: {{ exam.exam_title }}</a></div>
+      <div class="card-body">
+          <span>Created by: <a href="#">{{exam.created_by.first_name}} {{exam.created_by.last_name}}</a></span>
+          <p class="card-text">Max Marks: {{exam.max_marks}}</p>
+          <p class="card-text">Available on: {{exam.date_open}}</p>
+          <p class="card-text">Closes on: {{exam.date_closed}}</p>
+          <p class="card-text">Duration: 30 mins</p>
+        </div>
+      </article>
+    {% endfor %}
+   </div>
+
+{% endblock content %}

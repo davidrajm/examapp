@@ -7,13 +7,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarToggle">
           <div class="navbar-nav mr-auto">
-            <a class="nav-item nav-link" href="{% url 'blog-home'%}">Home</a>
-            <a class="nav-item nav-link" href="{% url 'blog-about'%}">About</a>
+            <a class="nav-item nav-link" href="{% url 'exam-home'%}">All Exams</a>
+            <a class="nav-item nav-link" href="{% url 'blog-home'%}">Blog</a>
           </div>
           <!-- Navbar Right Side -->
           <div class="navbar-nav">
             {% if user.is_authenticated %}
-            <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>            
+            <a class="nav-item nav-link" href="#">New Exam</a>            
             <a class="nav-item nav-link" href="{% url 'user-profile' %}">Profile</a>            
             <a class="nav-item nav-link" href="{% url 'user-logout' %}">Logout</a>            
             {% else %}

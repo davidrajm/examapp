@@ -1,0 +1,36 @@
+{% extends "exam/base.html" %}
+
+
+{% block content %}
+   <div class="container my-3">
+       <form method="POST">
+           {% csrf_token %}
+    {% for item in questions %}
+        <div class="card my-3">
+            <div class="card-body">
+                <div class="card-title question_text">{{item.qn.question_text}}
+                    <span class="float-right mr-2 ">{{item.qn.mark}} point(s)</span>
+                    
+                </div>
+                <div class="card-text py-3 form-group">
+                {% for choice in item.choices %}
+                    <div class="form-check py-2">
+                        <input class="form-check-input" type="radio" name="{{item.qn.pk}}" value="{{choice.id}}">
+                        <label class="form-check-label" for="{{choice.text}}">
+                            {{choice.text}}
+                        </label>
+                      </div>
+                      
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    {% endfor %}
+    <div class="form-group">
+        <button href="" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+   </div>
+
+{% endblock content %}
