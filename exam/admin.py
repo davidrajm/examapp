@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Exam, Category, Question
+from .models import Exam, Category, Question #ExamTaker
 
 from mcq.models import MCQ, Choice
 # Register your models here.

@@ -1,0 +1,15 @@
+{% extends "exam/base.html" %}
+
+
+{% block content %}
+   <div class="container my-3">
+       <form method="POST">
+           {% csrf_token %}
+    
+    <div class="form-group">
+        <button href="" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+   </div>
+
+{% endblock content %}

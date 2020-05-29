@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     #Our Apps
     'exam.apps.ExamConfig',
     'mcq',
+    'results',
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'crispy_forms',

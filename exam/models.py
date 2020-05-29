@@ -20,6 +20,9 @@ class Exam(models.Model):
     def __str__(self):
             return self.sub_code +":" + self.exam_title
 
+    def get_duration(self):
+        return self.date_closed - self.date_open
+
 
 class Category(models.Model):
     category = models.CharField(max_length = 100, verbose_name = 'Category Name', blank=True,
@@ -58,3 +61,7 @@ class Question(models.Model):
 
     def __str__(self):
         return self.question_text
+
+
+
+    

@@ -12,7 +12,7 @@
           <p class="card-text">Max Marks: {{exam.max_marks}}</p>
           <p class="card-text">Available on: {{exam.date_open}}</p>
           <p class="card-text">Closes on: {{exam.date_closed}}</p>
-          <p class="card-text">Duration: 30 mins</p>
+          <p class="card-text">Duration: {{exam.date_open|timesince:exam.date_closed }}</p>
         </div>
       </article>
    </div>
